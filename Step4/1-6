@@ -1,0 +1,25 @@
+1(Get all dealerships)
+SELECT * FROM dealership;
+
+2(Find all vehicles for a specific dealership)
+SELECT DS.dealership_id, DS.name, I.vin, V.name FROM dealership AS DS
+JOIN inventory AS I On I.dealership_id = DS.dealership_id
+JOIN vehicles AS V ON I.vin = V.vin
+
+3(Find a car by VIN)
+SELECT * FROM vehicles
+WHERE vin = 1234
+
+4(Find the dealership where a certain car is located, by VIN)
+SELECT DS.dealership_id, DS.name, I.vin, V.name FROM dealership AS DS
+JOIN inventory AS I On I.dealership_id = DS.dealership_id
+JOIN vehicles AS V ON I.vin = V.vin
+WHERE  V.vin = 1234
+
+5)(Find all Dealerships that have a certain car type (i.e. Red Ford Mustang))
+SELECT DS.dealership_id, DS.name, I.vin, V.name, v.color FROM dealership AS DS
+JOIN inventory AS I On I.dealership_id = DS.dealership_id
+JOIN vehicles AS V ON I.vin = V.vin
+WHERE  V.name = 'Ford Mustang' AND V.color = 'blue'
+
+6(Get all sales information for a specific dealer for a specific date range)

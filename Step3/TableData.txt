@@ -1,0 +1,41 @@
+(data for dealership)
+(1, 'Toyota Central', '123 Main St', '123-123-1234'),
+(2, 'Honda City', '456 Elm Ave', '456-456-4567'),
+(3, 'Ford Motors', '789 Oak Blvd', '789-789-7890'),
+(4, 'Chevy Town', '321 Pine Rd', '321-321-4321'),
+(5, 'Nissan Hub', '654 Maple Dr', '654-654-9876')
+
+(data for inventory)
+INSERT INTO inventory (dealership_id, vin) VALUES
+(1, '1234'),
+(1, '5678'),
+(2, '2345'),
+(2, '6789'),
+(3, '3456'),
+(3, '7890'),
+(4, '4567'),
+(4, '8901'),
+(5, '5670'),
+(5, '9012')
+
+
+(data for vehicles)
+INSERT INTO vehicles(vin, name, color, SOLD) VALUES
+('1234','Toyota Camry','red',true),
+('5678','Toyota Tacoma','blue',false),
+('2345','Honda Civic','gray',true),
+('6789','Honda Prelude','red',true),
+('3456','Ford Explorer','black',false),
+('7890','Ford Mustang','blue',true),
+('4567','Chevrolet Corvette','black',false),
+('8901','Chevrolet Camaro','grey',false),
+('5670','Nissan Sentra','grey',false),
+('9012','Nissan Rogue','black',true)
+
+(data for sales contract)
+INSERT INTO sales_contract (id, vin, customer_name, sale_date, total_price, payment_method) VALUES
+(1, '1234', 'Bill', '2020-12-10', 10000, 'check'),
+(2, '2345', 'Sarah', '2023-01-01', 15000, 'cash'),
+(3, '6789', 'Wilmer', '2022-08-15', 12000, 'cash'),
+(4, '7890', 'Ryan', '2022-11-09', 25000, 'cash'),
+(5, '9012', 'Paulo', '2025-04-16', 16000, 'cash')
